@@ -1,6 +1,6 @@
 import { ArrowRight, Check, Crown } from "lucide-react";
 import SectionHeading from "./SectionHeading";
-import TiltCard from "./TiltCard";
+import TiltCard from "@/components/shared/TiltCard";
 
 const PLANS = [
   {

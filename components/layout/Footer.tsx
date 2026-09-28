@@ -1,4 +1,5 @@
-import { Camera, Facebook, Instagram, Mail, MapPin, Twitter, Youtube } from "lucide-react";
+import { Camera, Mail, MapPin } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaXTwitter, FaYoutube } from "react-icons/fa6";
 import { SITE } from "@/lib/site";
 
 const COLUMNS = [
@@ -30,10 +31,10 @@ const COLUMNS = [
 ];
 
 const SOCIALS = [
-  { Icon: Instagram, label: "Instagram" },
-  { Icon: Twitter, label: "Twitter" },
-  { Icon: Youtube, label: "YouTube" },
-  { Icon: Facebook, label: "Facebook" },
+  { Icon: FaFacebookF, label: "Facebook", href: "#" },
+  { Icon: FaInstagram, label: "Instagram", href: "#" },
+  { Icon: FaXTwitter, label: "X (Twitter)", href: "#" },
+  { Icon: FaYoutube, label: "YouTube", href: "#" },
 ];
 
 export default function Footer() {
@@ -82,8 +83,8 @@ export default function Footer() {
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-5 py-6 text-sm sm:flex-row">
           <p>&copy; {new Date().getFullYear()} {SITE.name}. Hak cipta dilindungi.</p>
           <ul className="flex gap-2">
-            {SOCIALS.map(({ Icon, label }) => (
-              <li key={label}>
+            {SOCIALS.map(({ Icon, label }, i) => (
+              <li key={i}>
                 <a
                   href="#"
                   aria-label={label}

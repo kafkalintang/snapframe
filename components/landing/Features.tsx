@@ -1,7 +1,7 @@
 import type { ReactNode } from "react";
 import { Aperture, Camera, Check, Cloud, Palette, Printer, QrCode, Wand2 } from "lucide-react";
 import SectionHeading from "./SectionHeading";
-import TiltCard from "./TiltCard";
+import TiltCard from "@/components/shared/TiltCard";
 
 function IconTile({ children, dark = false }: { children: ReactNode; dark?: boolean }) {
   return (
