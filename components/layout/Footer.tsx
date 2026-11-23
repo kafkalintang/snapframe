@@ -54,7 +54,7 @@ export default function Footer() {
           <ul className="mt-5 space-y-2 text-sm">
             <li className="flex items-center gap-2.5">
               <Mail size={16} className="text-brand-400" />
-              halo@snapbooth.id
+              halo@snapframe.id
             </li>
             <li className="flex items-center gap-2.5">
               <MapPin size={16} className="text-brand-400" />
