@@ -27,7 +27,7 @@ export default function Hero() {
             className="animate-rise mt-6 max-w-xl text-lg leading-relaxed text-brand-900/70"
             style={{ animationDelay: "120ms" }}
           >
-            SnapBooth mengubah tablet atau laptop menjadi photobooth lengkap. Tamu berpose, foto tercetak
+            SnapFrame mengubah tablet atau laptop menjadi photobooth lengkap. Tamu berpose, foto tercetak
             dengan frame pilihanmu, dan hasilnya terkirim ke HP mereka lewat QR.
           </p>
 
