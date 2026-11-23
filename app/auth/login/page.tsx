@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from "react";
 import {
   Camera,
@@ -22,8 +24,8 @@ export default function LoginSnapFrame() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#F8FAFC] p-4">
-      <div className="w-full max-w-5xl h-[680px] flex bg-white rounded-3xl shadow-xl overflow-hidden">
+    <div className="min-h-screen flex items-center justify-center bg-[#F8FAFC] p-4 font-sans">
+      <div className="w-full max-w-5xl h-[680px] flex bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
         {/* ===== KIRI: FORM ===== */}
         <div className="flex-1 p-12 flex flex-col justify-center">
           {/* Logo */}
@@ -59,6 +61,7 @@ export default function LoginSnapFrame() {
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="kamu@email.com"
                   className="w-full pl-11 pr-4 py-3.5 rounded-xl border-2 border-slate-100 bg-slate-50 text-sm outline-none transition focus:border-blue-400 focus:bg-white focus:ring-4 focus:ring-blue-100"
+                  required
                 />
               </div>
             </div>
@@ -76,13 +79,14 @@ export default function LoginSnapFrame() {
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
                   className="w-full pl-11 pr-4 py-3.5 rounded-xl border-2 border-slate-100 bg-slate-50 text-sm outline-none transition focus:border-blue-400 focus:bg-white focus:ring-4 focus:ring-blue-100"
+                  required
                 />
               </div>
             </div>
 
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm transition shadow-lg shadow-blue-200"
+              className="w-full flex items-center justify-center gap-2 py-4 rounded-xl bg-blue-500 hover:bg-blue-600 text-white font-semibold text-sm transition shadow-lg shadow-blue-200 mt-2"
             >
               Masuk
               <ArrowRight className="w-4 h-4" />
@@ -104,7 +108,7 @@ export default function LoginSnapFrame() {
           <div className="absolute -bottom-20 -left-10 w-72 h-72 bg-blue-300/30 rounded-full blur-3xl" />
 
           {/* Kartu utama ala frame foto */}
-          <div className="relative w-64 aspect-[3/4] bg-white rounded-3xl shadow-2xl rotate-[-6deg] flex flex-col items-center justify-center gap-3 border-[6px] border-blue-200">
+          <div className="relative w-64 aspect-[3/4] bg-white rounded-3xl shadow-2xl rotate-[-6deg] flex flex-col items-center justify-center gap-3 border-[6px] border-blue-200 z-10">
             <div className="w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center">
               <Smile className="w-8 h-8 text-blue-500" strokeWidth={2.2} />
             </div>
@@ -113,30 +117,30 @@ export default function LoginSnapFrame() {
           </div>
 
           {/* Floating card: Filter AI */}
-          <div className="absolute top-24 left-10 bg-white rounded-2xl shadow-lg px-4 py-2.5 flex items-center gap-2 animate-[float_6s_ease-in-out_infinite]">
+          <div className="absolute top-24 left-10 bg-white rounded-2xl shadow-lg px-4 py-2.5 flex items-center gap-2 animate-[float_6s_ease-in-out_infinite] z-20">
             <Sparkles className="w-4 h-4 text-blue-500" />
             <span className="text-xs font-semibold text-slate-700">Filter AI</span>
           </div>
 
           {/* Floating card: 2.4rb suka */}
-          <div className="absolute bottom-28 left-6 bg-white rounded-2xl shadow-lg px-4 py-2.5 flex items-center gap-2 animate-[float_7s_ease-in-out_infinite]">
+          <div className="absolute bottom-28 left-6 bg-white rounded-2xl shadow-lg px-4 py-2.5 flex items-center gap-2 animate-[float_7s_ease-in-out_infinite] z-20">
             <Heart className="w-4 h-4 text-blue-500" fill="currentColor" />
             <span className="text-xs font-semibold text-slate-700">2.4rb suka</span>
           </div>
 
           {/* Floating icon: QR */}
-          <div className="absolute bottom-16 right-10 w-12 h-12 bg-white rounded-2xl shadow-lg flex items-center justify-center animate-[float_5s_ease-in-out_infinite]">
+          <div className="absolute bottom-16 right-10 w-12 h-12 bg-white rounded-2xl shadow-lg flex items-center justify-center animate-[float_5s_ease-in-out_infinite] z-20">
             <QrCode className="w-5 h-5 text-blue-500" />
           </div>
 
           {/* Floating icon: Camera */}
-          <div className="absolute top-16 right-14 w-12 h-12 bg-white rounded-2xl shadow-lg flex items-center justify-center animate-[float_8s_ease-in-out_infinite]">
+          <div className="absolute top-16 right-14 w-12 h-12 bg-white rounded-2xl shadow-lg flex items-center justify-center animate-[float_8s_ease-in-out_infinite] z-20">
             <Camera className="w-5 h-5 text-blue-500" />
           </div>
         </div>
       </div>
 
-      {/* Keyframes untuk animasi float (Tailwind arbitrary) */}
+      {/* Keyframes untuk animasi float */}
       <style>{`
         @keyframes float {
           0%, 100% { transform: translateY(0); }
